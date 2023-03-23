@@ -1,14 +1,29 @@
 {
   "name": "@smaton/component-lib",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
-  "source": "src/index.ts",
+  "targets": {
+    "css": {
+      "source": "src/styles/tailwind.css"
+    },
+    "main": {
+      "source": "src/index.tsx"
+    },
+    "types": {
+      "source": "src/index.tsx"
+    }
+  },
+  "css": "dist/tailwind.css",
+  "source": "src/index.tsx",
   "main": "dist/main.js",
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "watch": "parcel watch",
-    "build": "parcel build && npm build-tailwind",
+    "build": "parcel build && npm run build-tailwind",
     "prepare": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
