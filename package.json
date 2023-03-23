@@ -1,5 +1,5 @@
 {
-  "name": "@maton/component-lib",
+  "name": "@smaton/component-lib",
   "version": "0.0.1",
   "description": "",
   "source": "src/index.ts",
@@ -9,6 +9,7 @@
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build && npm build-tailwind",
+    "prepare": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify"
